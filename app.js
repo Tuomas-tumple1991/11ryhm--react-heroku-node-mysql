@@ -25,7 +25,7 @@ app.use(express.static('build'))
 
 
 
-/*
+
 // LIITÄNNÄT FRONTENDIIN
 app.use(
     cors({
@@ -34,7 +34,7 @@ app.use(
       credentials: true
     })
   );
-*/
+
 
 
 /*
