@@ -86,7 +86,7 @@ module.exports = pool
 
 
 
-app.post("/register", (req, res ) => {
+app.post("https://ryhma11-ravintolaapp-ver2.herokuapp.com/register", (req, res ) => {
 console.log("NYT OLLAAN REGISTERI HOMMASSA")
 const user_name = req.body.user_name
 const user_password = req.body.user_password
