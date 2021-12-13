@@ -26,17 +26,17 @@ app.use(express.static('build'))
 
 
 
-/*
+
 
 // LIITÄNNÄT FRONTENDIIN
 app.use(
   cors({
-    origin: ["http://localhost:3000"], // HOX HOX TÄNNE FRONTEND OSOITE
+    origin: ["http://localhost:3000","https://ryhma11-ravintolaapp-ver2.herokuapp.com/"], // HOX HOX TÄNNE FRONTEND OSOITE
     methods: ["GET", "POST", "PUT","DELETE"],
     credentials: true
   })
 );
-*/
+
 
 /*
 app.use((req , res, next) => {
