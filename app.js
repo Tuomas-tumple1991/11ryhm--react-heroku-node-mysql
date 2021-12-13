@@ -8,7 +8,7 @@ const JwtStrategy = require ('passport-jwt').Strategy
 const bcrypt = require("bcrypt");
 const cookieParser = require('cookie-parser')
 const session = require ('express-session')
-const cors = require("cors");
+//const cors = require("cors");
 const mysql = require('mysql')
 const saltRounds = 5;
 const path = require('path')
@@ -25,7 +25,7 @@ app.use(express.static('build'))
 
 
 
-
+/*
 // LIITÄNNÄT FRONTENDIIN
 app.use(
     cors({
@@ -34,7 +34,7 @@ app.use(
       credentials: true
     })
   );
-
+*/
 
 
 /*
