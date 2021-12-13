@@ -28,16 +28,12 @@ app.use(express.static('build'))
 
 
 
-/*
-// LIITÄNNÄT FRONTENDIIN
-app.use(
-    cors({
-      origin: ["http://localhost:3000"], // HOX HOX TÄNNE FRONTEND OSOITE
-      methods: ["GET", "POST", "PUT","DELETE"],
-      credentials: true
-    })
-  );
-*/
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 
 /*
