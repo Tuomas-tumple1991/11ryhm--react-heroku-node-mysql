@@ -8,7 +8,7 @@ const JwtStrategy = require ('passport-jwt').Strategy
 const bcrypt = require("bcrypt");
 const cookieParser = require('cookie-parser')
 const session = require ('express-session')
-const cors = require("cors");
+//const cors = require("cors");
 const mysql = require('mysql')
 const saltRounds = 5;
 const path = require('path')
@@ -26,25 +26,28 @@ app.use(express.static('build'))
 
 
 
-
+/*
 
 // LIITÄNNÄT FRONTENDIIN
 app.use(
   cors({
-    origin: ["http://localhost:3000","https://ryhma11-ravintolaapp-ver2.herokuapp.com/"], // HOX HOX TÄNNE FRONTEND OSOITE
+    origin: ["http://localhost:3000"], // HOX HOX TÄNNE FRONTEND OSOITE
     methods: ["GET", "POST", "PUT","DELETE"],
     credentials: true
   })
 );
-
+*/
 
 
 app.use((req , res, next) => {
 
-    console.log('Terveisiä alusta')
-    
-    next()
-})
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Methods', ['PATCH', 'POST', 'GET', 'DELETE', 'PUT']);
+  res.setHeader('Access-Control-Allow-Headers', ['Content-Type']);
+  res.setHeader('Access-Control-Expose-Headers', ['Content-Type']);
+  next();
+});
+
 
 
 app.use(express.static(path.join(__dirname, 'build')));
