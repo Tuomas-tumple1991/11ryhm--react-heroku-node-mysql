@@ -85,7 +85,7 @@ const pool = mysql.createPool ({
     host : 'DB_HOST',// Pitää olla omat liitännät
     user: 'DB_USER',    // HOX HOX vaati ehkä oman USER ja PASSWORD tunnuksen
     password: 'DB_PASS',
-    database: 'CLEARDB_DATABASE_URL'
+    database: 'DB_SCHEMA'
 })
 
 
