@@ -44,7 +44,7 @@ app.use((req , res, next) => {
   res.setHeader('Access-Control-Allow-Methods', ['PATCH', 'POST', 'GET', 'DELETE', 'PUT']);
   res.setHeader('Access-Control-Allow-Headers', ['Content-Type']);
   res.setHeader('Access-Control-Expose-Headers', ['Content-Type']);
-  res.setHeader('Access-Control-Allow-Origin', "https://ryhma11-ravintolaapp-ver2.herokuapp.com/")
+  res.setHeader('Access-Control-Allow-Origin', '*')
 
   next();
 });
