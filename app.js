@@ -45,7 +45,11 @@ app.use((req , res, next) => {
   res.setHeader('Access-Control-Allow-Headers', ['Content-Type']);
   res.setHeader('Access-Control-Expose-Headers', ['Content-Type']);
   res.setHeader('Access-Control-Allow-Origin', '*')
-
+  cors({
+    origin: ["http://localhost:3000"], // HOX HOX TÄNNE FRONTEND OSOITE
+    methods: ["GET", "POST", "PUT","DELETE"],
+    credentials: true
+  })
   next();
 });
 
