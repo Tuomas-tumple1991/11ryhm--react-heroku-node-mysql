@@ -38,7 +38,7 @@ app.use(
 );
 */
 
-
+/*
 app.use((req , res, next) => {
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Methods', ['PATCH', 'POST', 'GET', 'DELETE', 'PUT']);
@@ -52,7 +52,7 @@ app.use((req , res, next) => {
   })
   next();
 });
-
+*/
 
 
 app.use(express.static(path.join(__dirname, 'build')));
@@ -77,15 +77,15 @@ app.use(session({
   
 // MYSQL KOODIT DATABSEN HAKEMISEEN
 //ClearDB Config
-//mysql://b9132be53ac5ad:936723d5@us-cdbr-east-05.cleardb.net/heroku_7b33cd9919ea5b7?reconnect=true
+//mysql:/
 
 //
 const pool = mysql.createPool ({
     connectionLimit : 10,
-    host : 'eu-cdbr-west-02.cleardb.net',
-    user: 'b2b162a2af584a',    // HOX HOX vaati ehkä oman USER ja PASSWORD tunnuksen
-    password: '67a7f4af',
-    database: 'heroku_bd27eaa9c789200'
+    host : '',// Pitää olla omat liitännät
+    user: '',    // HOX HOX vaati ehkä oman USER ja PASSWORD tunnuksen
+    password: '',
+    database: ''
 })
 
 
